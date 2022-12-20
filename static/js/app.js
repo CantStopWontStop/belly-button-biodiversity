@@ -1,16 +1,28 @@
 const bio_data = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json"
 const svg = d3.select('svg');
 
-d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json").then(data => {
+d3.json(bio_data).then(data => {
 
-  
-    console.log(data.samples[0].sample_values)
+    // for (let i = 0; i < data.length; i++) {
+    
+    //             // Store the film at index `i` for evaluation
+               
+    //             console.log(data[i])
+    //         }
+
+    for (let i = 0; i < data.samples.length; i++) {
+    
+                    // Store the film at index `i` for evaluation
+                   
+                    console.log(data.samples[i].sample_values)
+                }
+    
     
     const rects = svg.selectAll('rect')
         .data(data.samples[0])
 
         
-    rects.attr('width', d => d.sample_values)
+    rects.attr('width', d => data.sample_values)
         .attr('height', 200)
         .attr('fill', 'orange');
         
@@ -29,7 +41,7 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
     // rects.attr('height',200)
     //     .
 
-}) 
+});
 // Fetch the JSON data and console log it
 // d3.json(bio_data).then(function(data) {
 //     for (let i = 0; i < data.length; i++) {
