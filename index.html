@@ -15,32 +15,18 @@
     <div class="row text-center bg-primary p-4">
       <div class="col-12 text-light">
         <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <h5>Use the interactive charts below to explore the dataset</h4>
       </div>
     </div>
     <div class="container-fluid bg-dark p-4">
       <div class="row">
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark col-md-3 bg-secondary" >
-          <h5>Test Subject ID No.:</h5>
-          <hr>
-          <h5 class="">Demographic Info</h5>
+          <h4 class="">Demographic Info</h4>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
-
+          <br>
           <hr>
-          <ul class="mb-auto text-decoration-none">
-            <li>
-              <h5>id</h5>
-            </li>
-            <li>
-              <h5>id</h5>
-            </li>
-            <li>
-              <h5>id</h5>
-            </li>
-            <li>
-              <h5>id</h5>
-            </li>
-          </ul>
+          <br>
+          <div class="mb-auto  p-3 text-decoration-none"id="sample-metadata" class="panel-body"></div>
           <hr>
         </div>
         <div class="col-md-8">
@@ -51,47 +37,14 @@
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="bubble-tab" data-bs-toggle="tab" data-bs-target="#bubble-tab-pane" type="button" role="tab" aria-controls="bubble-tab-pane" aria-selected="false">Bubble Chart</button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="gauge-tab" data-bs-toggle="tab" data-bs-target="#gauge-tab-pane" type="button" role="tab" aria-controls="gauge-tab-pane" aria-selected="false">Gauge</button>
-            </li>
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="bar-tab-pane" role="tabpanel" aria-labelledby="bar-tab" tabindex="0">
-              <div class="canvas">
-                <svg width="600" height = "512">
-                  <rect>
-                    
-                  </rect>
-                  <text></text>
-                </svg>
-
-              </div>
+              <div id="bar"></div>
             </div>
             <div class="tab-pane fade" id="bubble-tab-pane" role="tabpanel" aria-labelledby="bubble-tab" tabindex="0">
-              <ul>
-                <li>
-                  <p>bubble 1</p>
-                </li>
-                <li>
-                  <p>bubble 2</p>
-                </li>
-                <li>
-                  <p>bubble 3</p>
-                </li>
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="gauge-tab-pane" role="tabpanel" aria-labelledby="gauge-tab" tabindex="0">
-              <ul>
-                <li>
-                  <p>gauge 1</p>
-                </li>
-                <li>
-                  <p>gauge 2</p>
-                </li>
-                <li>
-                  <p>gauge 3</p>
-                </li>
-              </ul>
+              <div id="bubble"></div>
+
             </div>
             
           </div>
